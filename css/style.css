@@ -45,6 +45,11 @@ table {
   display: none;
 }
 
+.game {
+  height: 100vh;
+  display: flex;
+}
+
 .car, .enemy {
   width: 50px;
   height: 100px;
@@ -54,7 +59,7 @@ table {
 
 .gameArea {
   width: 300px;
-  height: 100%;
+  /*min-height: 100vh;*/
   position: relative;
   margin: auto;
   background: #222;
@@ -70,24 +75,42 @@ table {
 }
 
 .start {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  margin: 0;
-  padding: 2rem 0;
-  text-align: center;
-  z-index: 200;
-  color: #fff;
-  font-size: 1.5rem;
-  background: black;
-  cursor: pointer;
-  font-family: sans-serif;
+  height: calc(50px - 2rem);
+  padding: 1rem;
+  box-shadow: 3px 3px 5px 1px #ccc;
+  background-color: white;
+  font-size: 20px;
   font-weight: 700;
+  /*z-index: 200;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  font: inherit;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 15px;
+}
+
+.btn:not(:last-child) {
+  margin-right: 15px;
+}
+
+.btn:disabled {
+  background-color: #ccc;
+  color: #ddd;
 }
 
 .score {
-  position: absolute;
+  /*position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -98,5 +121,24 @@ table {
   color: skyblue;
   text-align: center;
   font-family: sans-serif;
-  font-weight: 500;
+  font-weight: 500;*/
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  box-shadow: -3px -3px 5px 1px #ccc;
+  padding: 1rem;
+  height: calc(50px - 2rem);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important; 
+  width: 1px !important; 
+  overflow: hidden;
 }
