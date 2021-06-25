@@ -1,0 +1,26 @@
+{
+  "name": "nfjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^13.1.4",
+    "electron-packager": "^15.2.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shums89/need_for_js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shums89/need_for_js/issues"
+  },
+  "homepage": "https://github.com/shums89/need_for_js#readme"
+}
